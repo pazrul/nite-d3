@@ -40,6 +40,7 @@ Note: *If the overlay is hidden and refresh() is called, the overlay position wi
 ## Available methods
 
 `nite.setMap()` set a specific map object  -- Not Implemented Yet
+
 `nite.setDate(Date object)` set a specific datetime, or `null` to use current datetime  
 `nite.calculatePositionOfSun(Date object)` returns LatLng for the specified date (has no effect on the overlay)  
 `nite.refresh()` Recalculate and refresh the position of the overlay  
