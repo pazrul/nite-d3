@@ -13,7 +13,7 @@ var nite = {
     marker_shadow_lite: null,
     shadow_radius: parseInt(6371 * Math.PI * 500),
     sun_position: null,
-    path: d3.geo.path().projection(projection),
+    path: null,
     circle: d3.geo.circle(),
     twilightAngle: 90,
     nightAngle: 87,
@@ -26,6 +26,7 @@ var nite = {
         this.sun_position = this.calculatePositionOfSun();
         this.color = config.color || this.color;
         this.opacity = config.opacity || this.opacity;
+        this.path = d3.geo.path().projection(projection);
 
         this.marker_shadow = svg.selectAll('path.nite-shadow-twilight')
             .data([this.getShadowPosition()])
